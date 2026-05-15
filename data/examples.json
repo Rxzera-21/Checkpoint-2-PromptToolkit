@@ -1,1 +1,34 @@
+{
+  "classificacao_sentimento": [
+    {"input": "Adorei o produto, chegou rapido e bem embalado!", "output": "POSITIVO"},
+    {"input": "Pessimo! Veio quebrado e o suporte nao resolveu nada.", "output": "NEGATIVO"},
+    {"input": "Produto bom, mas a entrega atrasou 10 dias.", "output": "MISTO"},
+    {"input": "Produto comum, funciona como esperado.", "output": "NEUTRO"},
+    {"input": "Superou todas as expectativas! Qualidade incrivel pelo preco.", "output": "POSITIVO"}
+  ],
+  "extracao_dados": [
+    {
+      "input": "iPhone 14 Pro R$ 7.999,00 com camera nao funcionando.",
+      "output": "{\"produto\": \"iPhone 14 Pro\", \"preco\": \"R$ 7.999,00\", \"defeito\": \"camera nao funcionando\"}"
+    },
+    {
+      "input": "Smart TV Samsung 55 4K R$ 2.799,00 sem imagem no HDMI 2.",
+      "output": "{\"produto\": \"Smart TV Samsung 55 4K\", \"preco\": \"R$ 2.799,00\", \"defeito\": \"sem imagem no HDMI 2\"}"
+    },
+    {
+      "input": "Geladeira Brastemp Frost Free 375L R$ 3.199,00 nao gela corretamente.",
+      "output": "{\"produto\": \"Geladeira Brastemp Frost Free 375L\", \"preco\": \"R$ 3.199,00\", \"defeito\": \"nao gela corretamente\"}"
+    }
+  ],
+  "sumarizacao_reclamacao": [
+    {
+      "input": "Comprei um celular ha 2 semanas e a bateria ja nao dura nem 3 horas. Fui na assistencia e eles disseram que e normal para esse modelo, mas isso nao e verdade pois meu amigo tem o mesmo e dura o dia todo. Quero troca ou reembolso.",
+      "output": "Bateria do celular dura menos de 3 horas em 2 semanas de uso. Assistencia alega ser normal. Cliente discorda e solicita troca ou reembolso."
+    },
+    {
+      "input": "Fiz um pedido de urgencia para presente de casamento e escolhi entrega expressa pagando R$ 45 a mais. O produto chegou 5 dias depois do casamento. A loja nao quer devolver o valor do frete expresso.",
+      "output": "Entrega expressa nao cumprida para presente de casamento. Loja recusa reembolso dos R$ 45 do frete expresso."
+    }
+  ]
+}
 

@@ -1,1 +1,112 @@
-
+{
+  "classificacao_sentimento": [
+    {
+      "input": "Produto chegou antes do prazo e a qualidade superou minhas expectativas! Recomendo demais.",
+      "esperado": "POSITIVO"
+    },
+    {
+      "input": "Veio com defeito de fábrica, a tela já estava trincada na caixa. Péssimo produto.",
+      "esperado": "NEGATIVO"
+    },
+    {
+      "input": "O preço é bom e chegou no prazo, mas a qualidade do material deixou a desejar.",
+      "esperado": "MISTO"
+    },
+    {
+      "input": "Produto OK, nada de especial. Cumpre o que promete.",
+      "esperado": "NEUTRO"
+    },
+    {
+      "input": "Excelente custo-benefício! Produto idêntico à foto, entrega rápida e embalagem reforçada.",
+      "esperado": "POSITIVO"
+    },
+    {
+      "input": "Demorou 30 dias para chegar, sem rastreamento e o produto veio diferente do anunciado. Horrível.",
+      "esperado": "NEGATIVO"
+    },
+    {
+      "input": "Gostei do produto, mas o atendimento pós-venda foi horrível quando precisei trocar.",
+      "esperado": "MISTO"
+    }
+  ],
+  "extracao_dados": [
+    {
+      "input": "Notebook Dell Inspiron 15 de R$ 3.499,00 com arranhao na tampa e bateria viciada.",
+      "esperado": {
+        "produto": "Notebook Dell Inspiron 15",
+        "preco": "R$ 3.499,00",
+        "defeito": "arranhao na tampa e bateria viciada"
+      }
+    },
+    {
+      "input": "Tenis Nike Air Max 270 tamanho 42 cor cinza R$ 599,90 sola descollando apos 2 usos.",
+      "esperado": {
+        "produto": "Tenis Nike Air Max 270",
+        "preco": "R$ 599,90",
+        "defeito": "sola descollando apos 2 usos"
+      }
+    },
+    {
+      "input": "Fritadeira Airfryer Philips Walita 4L por R$ 449,00 nao esquenta corretamente acima de 180 graus.",
+      "esperado": {
+        "produto": "Fritadeira Airfryer Philips Walita 4L",
+        "preco": "R$ 449,00",
+        "defeito": "nao esquenta corretamente acima de 180 graus"
+      }
+    },
+    {
+      "input": "Smartwatch Samsung Galaxy Watch 6 R$ 1.299,00 GPS nao funciona e monitor cardiaco impreciso.",
+      "esperado": {
+        "produto": "Smartwatch Samsung Galaxy Watch 6",
+        "preco": "R$ 1.299,00",
+        "defeito": "GPS nao funciona e monitor cardiaco impreciso"
+      }
+    },
+    {
+      "input": "Cadeira Gamer ThunderX3 EC3 R$ 1.850,00 encosto rachando apos 3 meses de uso.",
+      "esperado": {
+        "produto": "Cadeira Gamer ThunderX3 EC3",
+        "preco": "R$ 1.850,00",
+        "defeito": "encosto rachando apos 3 meses de uso"
+      }
+    },
+    {
+      "input": "Fone Bluetooth JBL Tune 510BT R$ 279,00 conexao cai constantemente e microfone com chiado.",
+      "esperado": {
+        "produto": "Fone Bluetooth JBL Tune 510BT",
+        "preco": "R$ 279,00",
+        "defeito": "conexao cai constantemente e microfone com chiado"
+      }
+    },
+    {
+      "input": "Monitor LG 27 Full HD 27MK430H R$ 1.150,00 com pixels mortos no centro da tela.",
+      "esperado": {
+        "produto": "Monitor LG 27 Full HD 27MK430H",
+        "preco": "R$ 1.150,00",
+        "defeito": "pixels mortos no centro da tela"
+      }
+    }
+  ],
+  "sumarizacao_reclamacao": [
+    {
+      "input": "Fiz uma compra no dia 05/03 e ate hoje, dia 28/03, nao recebi meu produto. Entrei em contato com o suporte tres vezes, fui redirecionado para diferentes atendentes sem resolucao. O rastreamento mostra objeto em transito ha 15 dias. Preciso do produto com urgencia pois era um presente de aniversario que ja passou. Quero reembolso imediato.",
+      "esperado": "Cliente aguarda produto ha 23 dias. Contactou suporte 3 vezes sem resolucao. Rastreamento parado ha 15 dias. Solicita reembolso."
+    },
+    {
+      "input": "Recebi o produto errado! Pedi uma camiseta azul tamanho M e recebi uma vermelha tamanho G. A embalagem estava correta com meu nome e endereco, mas o produto dentro era completamente diferente. Tentei trocar pelo chat mas me disseram que devo pagar o frete de devolucao, o que acho absurdo ja que o erro foi da loja. Exijo troca sem custo e com urgencia.",
+      "esperado": "Cliente recebeu produto errado. Erro da loja mas exigem frete de devolucao. Solicita troca sem custo."
+    },
+    {
+      "input": "Meu pedido chegou com a embalagem completamente destruida como se tivesse sido amassada durante o transporte. O produto dentro ficou danificado - uma garrafa de perfume que vazou em toda a caixa. O cheiro esta muito forte e o produto e inutilizavel. Tirei fotos de tudo. Quero ressarcimento total do valor pago de R$ 350,00.",
+      "esperado": "Embalagem destruida no transporte. Perfume vazou e produto inutilizavel. Possui fotos. Solicita ressarcimento de R$ 350,00."
+    },
+    {
+      "input": "Comprei um notebook que parou de funcionar apos apenas 45 dias de uso. A garantia e de 1 ano mas a assistencia tecnica autorizada me disse que o dano e por mau uso sem nem abrir o equipamento para verificar. Nunca derrubei ou molhei o aparelho. Apenas usava normalmente para trabalho. Preciso de uma solucao rapida pois trabalho dependendo desse computador.",
+      "esperado": "Notebook parou em 45 dias. Garantia negada por mau uso sem avaliacao. Cliente nega mau uso. Equipamento necessario para trabalho."
+    },
+    {
+      "input": "Fiz tres pedidos no mesmo dia para aproveitar o frete gratis. Dois chegaram normalmente mas o terceiro que era o mais caro consta como entregue no sistema mas nunca recebi. Moro num condominio e a portaria nao tem registro de nenhuma entrega nesse dia. Estou sendo ignorado pelo suporte ha uma semana.",
+      "esperado": "De 3 pedidos 1 consta entregue mas nao foi recebido. Portaria sem registro. Suporte sem resposta ha uma semana."
+    }
+  ]
+}
