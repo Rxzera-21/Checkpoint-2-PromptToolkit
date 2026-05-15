@@ -1,1 +1,33 @@
+{
+  "classificacao_sentimento": {
+    "zero_shot": "Classifique o sentimento da avaliacao abaixo como POSITIVO, NEGATIVO, NEUTRO ou MISTO.\nResponda APENAS com uma das quatro opcoes acima, sem explicacao adicional.\n\nAvaliacao: \"{input}\"\n\nClassificacao:",
+    "cot_passos": [
+      "Identifique palavras e expressoes claramente positivas no texto",
+      "Identifique palavras e expressoes claramente negativas no texto",
+      "Avalie a proporcao entre aspectos positivos e negativos",
+      "Se so ha positivos: POSITIVO. Se so ha negativos: NEGATIVO. Se ha ambos: MISTO. Se neutro: NEUTRO",
+      "Conclua com a classificacao final"
+    ]
+  },
+  "extracao_dados": {
+    "zero_shot": "Extraia as seguintes informacoes do texto abaixo e retorne em formato JSON valido:\n- produto (string: nome completo do produto)\n- preco (string: valor monetario ou null)\n- defeito (string: descricao do problema)\n\nResponda APENAS com o JSON, sem texto adicional.\n\nTexto: \"{input}\"\n\nJSON:",
+    "cot_passos": [
+      "Leia o texto e identifique o nome completo do produto mencionado",
+      "Procure por valores monetarios (R$, reais, preco)",
+      "Identifique a descricao do problema ou defeito relatado",
+      "Monte o JSON com os tres campos: produto, preco e defeito",
+      "Verifique se o JSON e valido antes de retornar"
+    ]
+  },
+  "sumarizacao_reclamacao": {
+    "zero_shot": "Resuma a reclamacao do cliente abaixo em no maximo 2 frases objetivas.\nFoco em: problema principal, acao tomada pelo cliente e o que ele solicita.\nTom: neutro e informativo.\n\nReclamacao: \"{input}\"\n\nResumo:",
+    "cot_passos": [
+      "Identifique o problema principal relatado pelo cliente",
+      "Verifique que acoes o cliente ja tomou (ligou, foi na loja, etc)",
+      "Identifique o que o cliente esta solicitando (reembolso, troca, etc)",
+      "Condense em no maximo 2 frases mantendo as informacoes essenciais",
+      "Use tom neutro e objetivo, sem julgamentos"
+    ]
+  }
+}
 
